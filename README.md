@@ -1,6 +1,8 @@
 # VBA-Get-Fields-From-.pdf
 VBA to retrieve Form Fields from a fillable .pdf
 
+Also included in this repository is a VB class. The VB function will also get the pdf form field names. However I still need to know the field names beforehand to use the VBA script.
+
 ```VBA
 Sub runFunction()
 
