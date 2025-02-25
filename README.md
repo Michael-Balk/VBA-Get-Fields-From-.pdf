@@ -8,7 +8,7 @@ Sub runFunction()
 
     Dim Result() As Variant
 
-    Result = getFormData("C:\Users\mbalk\OneDrive - State of Kansas, OITS\Desktop\Sample Form.pdf")
+    Result = getFormData("C:\......\Sample Form.pdf")
 
     For i = 0 To UBound(Result)
         MsgBox CStr(Result(i))
