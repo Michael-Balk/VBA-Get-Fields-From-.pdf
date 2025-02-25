@@ -8,7 +8,7 @@ Sub runFunction()
 
     Dim Result() As Variant
 
-    Result = getFormData("C:\.....\Sample Form.pdf")
+    Result = getFormData("C:\Users\mbalk\OneDrive - State of Kansas, OITS\Desktop\Sample Form.pdf")
 
     For i = 0 To UBound(Result)
         MsgBox CStr(Result(i))
@@ -37,13 +37,9 @@ Function getFormData(formLocation As String)
 
         ReDim Result(num - 1) As Variant
         
-        Dim fieldNames() As Variant
-        fieldNames = Array("fieldOne", "fieldTwo", "fieldThree") ''these are the known field names from the pdf
-        
-        For i = 0 To UBound(fieldNames) 'num - 1
-        If IsNull(javascriptObj.getField(fieldNames(i)).Value) = False Then
-            ''Result(i) = javasript.getField(javascriptObj.getNthFieldName(i)).Value  ''getNthFieldName works in .VB, haven't got it working here
-            Result(i) = javascriptObj.getField(fieldNames(i)).Value     ''using known field names array instead
+        For i = 0 To num - 1
+        If IsNull(javascriptObj.getField(javascriptObj.getNthFieldName(i)).Value) = False Then
+            Result(i) = javascriptObj.getField(javascriptObj.getNthFieldName(i)).Value
         Else
             Result(i) = Null
         End If
