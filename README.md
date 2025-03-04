@@ -1,6 +1,8 @@
 # VBA-Get-Fields-From-.pdf
 VBA to retrieve Form Fields from a fillable .pdf
 
+*Need Acrobat Standard or Pro. This does not work with Reader alone.
+
 Also included in this repository is a VB class with the same functionality for .net projects.
 
 ```VBA
